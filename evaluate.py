@@ -39,7 +39,7 @@ print([t.name for t in best_team])  # Print the names of the Pokémon in the tea
 results = []
 random.seed(1)
 
-# Simulate 1000 trials
+# Simulate 1000 trials -> should ensure a normal distribution of teams to compare to the optimized teams
 for trial in tqdm.tqdm(range(1000)):
     random_team = battle_sim.create_random_team(pdata, mdata, learnset)  # Generate a random team
     for _ in range(10):  # Each trial involves 10 battles
